@@ -32,7 +32,7 @@ export default function Technology() {
     <>
       <div className="container">
         <Title title="Technology" />
-        {loading && <Loading />}
+        {loading && <Loading count={5} />}
         <div className="row">
           {data.map((article) => {
             return (
@@ -43,8 +43,7 @@ export default function Technology() {
                   desc={article.description}
                   published={article.publishedAt}
                   source={article.source.name}
-                  content={article.content}
-                  pathName="technology"
+                  url={article.url}
                 />
               </div>
             );

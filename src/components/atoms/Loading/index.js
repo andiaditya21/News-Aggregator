@@ -1,6 +1,6 @@
 import Skeleton from "react-loading-skeleton";
 
-const Loading = () => {
+const Loading = ({ count }) => {
   return (
     <div className="row justify-content-center">
       <div className="col-8">
@@ -8,7 +8,7 @@ const Loading = () => {
           <Skeleton />
         </h3>
         <p>
-          <Skeleton count={5} />
+          <Skeleton count={count} />
         </p>
       </div>
     </div>

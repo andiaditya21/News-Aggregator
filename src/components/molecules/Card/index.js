@@ -1,16 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styles from "./card.module.css";
 
-export default function Card({
-  title,
-  desc,
-  published,
-  image,
-  source,
-  pathName,
-  content,
-}) {
+export default function Card({ title, desc, published, image, source, url }) {
   const date = new Date(published);
   const year = date.getFullYear();
   const month = date.getMonth() + 1;
@@ -37,22 +28,17 @@ export default function Card({
           </p>
         </div>
         <button className={`btn ${styles.button}`}>
-          <Link
+          {/* <Link className={`${styles.link}`} to={url} target="_blank">
+            Go to Website
+          </Link> */}
+          <a
+            href={url}
             className={`${styles.link}`}
-            to={{
-              pathname: `/${pathName}/${title}`,
-              state: {
-                title: title,
-                image: image,
-                published: published,
-                source,
-                content,
-              },
-            }}
             target="_blank"
+            rel="noreferrer"
           >
-            See Detail
-          </Link>
+            Go to Website
+          </a>
         </button>
       </div>
     </div>
