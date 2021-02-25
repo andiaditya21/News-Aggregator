@@ -1,0 +1,30 @@
+.wrapperOverlay {
+    height: 280;
+}
+
+.overlay {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    width: 100%;
+}
+
+.button {
+    background-color: #a3ddcb;
+}
+
+.link {
+    color: white;
+}
+.link:hover {
+    text-decoration: none;
+    color: white;
+}
+

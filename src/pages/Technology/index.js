@@ -1,25 +1,30 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Title } from "../../components";
+import { Loading, Title } from "../../components";
 import { Card } from "../../components";
 // import { getApi } from "../../config/api";
+// import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 export default function Technology() {
   // const [currentPage, setCurrentPage] = useState([]);
   const [data, setData] = useState([]);
   const [error, setError] = useState("");
+  const [loading, isLoading] = useState(false);
 
   useEffect(() => {
+    isLoading(true);
     axios
       .get(
         `https://newsapi.org/v2/everything?q=technology&apiKey=95e4fb8dc0b647d9a06d592b3c65ddaf`
       )
       .then((res) => {
         // console.log("getData", res);
+        isLoading(false);
         setData(res.data.articles);
       })
       .catch((err) => {
-        console.log("errornya", err);
+        // console.log("errornya", err);
+        isLoading(false);
         setError(`${err.message}. Your API key is invalid or incorrect`);
       });
   }, []);
@@ -27,15 +32,19 @@ export default function Technology() {
     <>
       <div className="container">
         <Title title="Technology" />
+        {loading && <Loading />}
         <div className="row">
           {data.map((article) => {
             return (
-              <div key={article.publishedAt} className="col-sm-6">
+              <div key={article.title} className="col-sm-6">
                 <Card
                   image={article.urlToImage}
                   title={article.title}
                   desc={article.description}
                   published={article.publishedAt}
+                  source={article.source.name}
+                  content={article.content}
+                  pathName="technology"
                 />
               </div>
             );
