@@ -23,7 +23,7 @@ export default function Science() {
       .catch((err) => {
         // console.log("errornya", err);
         isLoading(false);
-        setError(`${err.message}. Your API key is invalid or incorrect`);
+        setError(`${err.message}`);
       });
   }, []);
   return (

@@ -50,21 +50,26 @@ export default function Carousel() {
               </p>
             </div>
             <div className="col-sm">
-              {loading && <Loading count={2} />}
-              <button style={{ border: "none", padding: 0 }}>
-                <a href={data.url} target="_blank" rel="noreferrer">
-                  <img src={data.image} alt="" style={{ height: 180 }} />
-                </a>
-              </button>
-              <p
-                className="text-muted"
-                style={{
-                  fontSize: 13,
-                  marginTop: 10,
-                }}
-              >
-                {data.title}
-              </p>
+              {loading ? (
+                <Loading count={5} />
+              ) : (
+                <>
+                  <button style={{ border: "none", padding: 0 }}>
+                    <a href={data.url} target="_blank" rel="noreferrer">
+                      <img src={data.image} alt="" style={{ height: 180 }} />
+                    </a>
+                  </button>
+                  <p
+                    className="text-muted"
+                    style={{
+                      fontSize: 13,
+                      marginTop: 10,
+                    }}
+                  >
+                    {data.title}
+                  </p>
+                </>
+              )}
             </div>
           </div>
         </div>
