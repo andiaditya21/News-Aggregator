@@ -1,7 +1,6 @@
 import Technology from "./Technology";
-// import News from "../pages/News";
-// import DetailNews from "../pages/DetailNews";
 import Science from "./Science";
-import DetailTechnology from "./DetailTechnology";
+import Sport from "./Sport";
+import Health from "./Health";
 
-export { Technology, Science, DetailTechnology };
+export { Technology, Science, Sport, Health };

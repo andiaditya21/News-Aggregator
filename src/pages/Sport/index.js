@@ -2,18 +2,20 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Loading, Title } from "../../components";
 import { Card } from "../../components";
+// import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
-export default function Science() {
+export default function Sport() {
   // const [currentPage, setCurrentPage] = useState([]);
   const [data, setData] = useState([]);
   const [error, setError] = useState("");
   const [loading, isLoading] = useState(false);
 
+  console.log(data);
   useEffect(() => {
     isLoading(true);
     axios
       .get(
-        `https://newsapi.org/v2/everything?q=science&apiKey=95e4fb8dc0b647d9a06d592b3c65ddaf`
+        `https://newsapi.org/v2/everything?q=sport&apiKey=95e4fb8dc0b647d9a06d592b3c65ddaf`
       )
       .then((res) => {
         // console.log("getData", res);
@@ -29,7 +31,7 @@ export default function Science() {
   return (
     <>
       <div className="container">
-        <Title title="Science" />
+        <Title title="Sport" />
         {loading && <Loading count={5} />}
         <div className="row">
           {data.map((article) => {

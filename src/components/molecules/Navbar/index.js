@@ -8,18 +8,42 @@ export default function Navbar() {
         className="row justify-content-between m-auto"
         style={{ width: "100%" }}
       >
-        <Link to="/" className="text-center">
-          Technology
-        </Link>
-        <Link to="/science" className="text-center">
-          Science
-        </Link>
-        <Link to="/news" className="text-center">
-          Sport
-        </Link>
-        <Link to="/news" className="text-center">
-          Business
-        </Link>
+        <button className="btn" style={{ backgroundColor: "#9be2cc" }}>
+          <Link
+            to="/"
+            className="text-center text-secondary"
+            style={{ textDecoration: "none", color: "white" }}
+          >
+            Technology
+          </Link>
+        </button>
+        <button className="btn" style={{ backgroundColor: "#9be2cc" }}>
+          <Link
+            to="/science"
+            className="text-center text-secondary"
+            style={{ textDecoration: "none", color: "white" }}
+          >
+            Science
+          </Link>
+        </button>
+        <button className="btn" style={{ backgroundColor: "#9be2cc" }}>
+          <Link
+            to="/sport"
+            className="text-center text-secondary"
+            style={{ textDecoration: "none", color: "white" }}
+          >
+            Sport
+          </Link>
+        </button>
+        <button className="btn" style={{ backgroundColor: "#9be2cc" }}>
+          <Link
+            to="/health"
+            className="text-center text-secondary"
+            style={{ textDecoration: "none", color: "white" }}
+          >
+            Business
+          </Link>
+        </button>
       </div>
     </div>
   );

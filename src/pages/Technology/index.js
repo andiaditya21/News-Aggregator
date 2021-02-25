@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Loading, Title } from "../../components";
 import { Card } from "../../components";
-// import { getApi } from "../../config/api";
 // import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 export default function Technology() {
@@ -42,7 +41,7 @@ export default function Technology() {
                   title={article.title}
                   desc={article.description}
                   published={article.publishedAt}
-                  source={article.source.name}
+                  author={article.author}
                   url={article.url}
                 />
               </div>

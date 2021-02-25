@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./card.module.css";
 
-export default function Card({ title, desc, published, image, source, url }) {
+export default function Card({ title, desc, published, image, author, url }) {
   const date = new Date(published);
   const year = date.getFullYear();
   const month = date.getMonth() + 1;
@@ -21,19 +21,18 @@ export default function Card({ title, desc, published, image, source, url }) {
           </div>
         </div>
         <div className="card-body">
-          <p className="text-muted">{source}</p>
-          <p className="card-text">{desc}</p>
           <p className="card-text">
             <small className="text-muted">{publish}</small>
           </p>
+          <p style={{ fontSize: 14 }}>
+            Author: <span className="text-muted">{author}</span>
+          </p>
+          <p className="card-text">{desc}</p>
         </div>
         <button className={`btn ${styles.button}`}>
-          {/* <Link className={`${styles.link}`} to={url} target="_blank">
-            Go to Website
-          </Link> */}
           <a
             href={url}
-            className={`${styles.link}`}
+            className={`${styles.link} text-secondary`}
             target="_blank"
             rel="noreferrer"
           >

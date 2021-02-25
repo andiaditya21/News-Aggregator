@@ -7,11 +7,12 @@ export default function Carousel() {
   const [data, setData] = useState({});
   const [loading, isLoading] = useState(false);
   const [error, setError] = useState("");
+  // console.log("data", data);
   useEffect(() => {
     isLoading(true);
     axios
       .get(
-        `https://newsapi.org/v2/top-headlines?apiKey=95e4fb8dc0b647d9a06d592b3c65ddaf&country=id&q=Isolasi`
+        `https://newsapi.org/v2/top-headlines?apiKey=95e4fb8dc0b647d9a06d592b3c65ddaf&country=id&q=covid`
       )
       .then((res) => {
         isLoading(false);
@@ -32,14 +33,21 @@ export default function Carousel() {
     <>
       <div
         className="jumbotron pt-2 pb-2 mb-3"
-        style={{ borderBottomLeftRadius: 50, borderBottomRightRadius: 50 }}
+        style={{
+          borderBottomLeftRadius: 50,
+          borderBottomRightRadius: 50,
+          backgroundColor: "#9be2cc",
+        }}
       >
         <div className="container text-center">
           <img src={Logo} alt="" className="img-fluid pb-4" />
           <div className="row align-items-center">
             <div className="col-sm">
               <h5>Top Headlines from Indonesian</h5>
-              <p>Mari patuhi protokol kesehatan demi pencegahan Covid-19</p>
+              <p className="text-secondary">
+                Mari bersama-sama kita patuhi protokol kesehatan demi pencegahan
+                Covid-19
+              </p>
             </div>
             <div className="col-sm">
               {loading && <Loading count={2} />}
