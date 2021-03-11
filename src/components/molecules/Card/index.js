@@ -1,7 +1,15 @@
 import React from "react";
 import styles from "./card.module.css";
 
-export default function Card({ title, desc, published, image, author, url }) {
+export default function Card({
+  title,
+  desc,
+  published,
+  image,
+  author,
+  url,
+  source,
+}) {
   const date = new Date(published);
   const year = date.getFullYear();
   const month = date.getMonth() + 1;
@@ -21,8 +29,11 @@ export default function Card({ title, desc, published, image, author, url }) {
           </div>
         </div>
         <div className="card-body">
-          <p className="card-text">
+          <p className="card-text text-right">
             <small className="text-muted">{publish}</small>
+          </p>
+          <p style={{ fontSize: 14, marginBottom: 5 }}>
+            Source: <span className="text-muted">{source}</span>
           </p>
           <p style={{ fontSize: 14 }}>
             Author: <span className="text-muted">{author}</span>

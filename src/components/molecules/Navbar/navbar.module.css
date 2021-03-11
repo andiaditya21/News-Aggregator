@@ -1,0 +1,9 @@
+.img {
+    background-color: #9be2cc; 
+    padding: 8px; 
+    border-radius: 4px;
+}
+
+.img:hover {
+    cursor: pointer;
+}

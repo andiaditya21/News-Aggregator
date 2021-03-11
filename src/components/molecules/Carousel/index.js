@@ -34,6 +34,7 @@ export default function Carousel() {
       <div
         className="jumbotron pt-2 pb-2 mb-3"
         style={{
+          boxShadow: "0 3px 5px rgba(0, 0, 0, 0.75)",
           borderBottomLeftRadius: 50,
           borderBottomRightRadius: 50,
           backgroundColor: "#9be2cc",
@@ -50,6 +51,11 @@ export default function Carousel() {
               </p>
             </div>
             <div className="col-sm">
+              {error && (
+                <div className="alert alert-danger" role="alert">
+                  {error}
+                </div>
+              )}
               {loading ? (
                 <Loading count={5} />
               ) : (
@@ -74,11 +80,6 @@ export default function Carousel() {
           </div>
         </div>
       </div>
-      {error && (
-        <div className="alert alert-danger" role="alert">
-          {error}
-        </div>
-      )}
     </>
   );
 }

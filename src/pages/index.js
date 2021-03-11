@@ -1,6 +1,3 @@
-import Technology from "./Technology";
-import Science from "./Science";
-import Sport from "./Sport";
-import Health from "./Health";
+import Home from "./Home";
 
-export { Technology, Science, Sport, Health };
+export { Home };

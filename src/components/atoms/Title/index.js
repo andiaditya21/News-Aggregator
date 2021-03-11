@@ -10,7 +10,7 @@ export default function Title({ title }) {
           paddingBottom: 8,
         }}
       >
-        {title} News
+        {!title ? "Technology News" : `${title} News`}
       </h6>
     </div>
   );
