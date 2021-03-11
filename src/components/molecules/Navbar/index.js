@@ -18,8 +18,6 @@ export default function Navbar({ onClick }) {
             src={IcTechnology}
             alt=""
             width={48}
-            // style={{ backgroundColor: "#9be2cc", padding: 8, borderRadius: 4 }}
-
             name="Technology"
             onClick={onClick}
           />
@@ -31,7 +29,6 @@ export default function Navbar({ onClick }) {
             alt=""
             width={48}
             onClick={onClick}
-            // style={{ backgroundColor: "#9be2cc", padding: 8, borderRadius: 4 }}
             name="Google"
           />
         </div>
@@ -42,7 +39,6 @@ export default function Navbar({ onClick }) {
             alt=""
             width={48}
             onClick={onClick}
-            // style={{ backgroundColor: "#9be2cc", padding: 8, borderRadius: 4 }}
             name="Apple"
           />
         </div>
@@ -53,7 +49,6 @@ export default function Navbar({ onClick }) {
             alt=""
             width={48}
             onClick={onClick}
-            // style={{ backgroundColor: "#9be2cc", padding: 8, borderRadius: 4 }}
             name="Microsoft"
           />
         </div>
@@ -64,7 +59,6 @@ export default function Navbar({ onClick }) {
             alt=""
             width={48}
             onClick={onClick}
-            // style={{ backgroundColor: "#9be2cc", padding: 8, borderRadius: 4 }}
             name="Android"
           />
         </div>

@@ -32,10 +32,10 @@ export default function Card({
           <p className="card-text text-right">
             <small className="text-muted">{publish}</small>
           </p>
-          <p style={{ fontSize: 14, marginBottom: 5 }}>
+          <p className={`${styles.textSource}`}>
             Source: <span className="text-muted">{source}</span>
           </p>
-          <p style={{ fontSize: 14 }}>
+          <p className={`${styles.textAuthor}`}>
             Author: <span className="text-muted">{author}</span>
           </p>
           <p className="card-text">{desc}</p>
